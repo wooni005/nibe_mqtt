@@ -1,0 +1,14 @@
+[Unit]
+Description=Nibe MQTT interface for Home Logic
+After=syslog.target network.target mosquitto.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/scripts/python/nibe_mqtt
+ExecStart=/usr/bin/python3 /home/pi/scripts/python/nibe_mqtt/nibe_mqtt.py
+User=pi
+Restart=always
+RestartSec=2s
+
+[Install]
+WantedBy=multi-user.target
