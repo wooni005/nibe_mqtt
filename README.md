@@ -31,12 +31,12 @@ Read this first: https://www.marshflattsfarm.org.uk/wordpress/?page_id=3480
 ### In short
 
 **Step 1** - Register your application on: https://api.nibeuplink.com/
- You can use my VPS for callback URL: https://firm-ware.cz/oauth2callback/index.php
+ You can use my VPS for callback URL: http://firm-ware.cz/oauth2callback/index.php
 
 **Step 2** - Get an Authorization Code, fill in your Nibe Uplink API Identifier instead of **[Identifier]**
 https://api.nibeuplink.com/oauth/authorize?response_type=code&client_id=9b1e683e2c904adfb52313b4a327b634&scope=READSYSTEM&redirect_uri=https://firm-ware.cz/oauth2callback/index.php&state=STATE
 
-You will be redirected to something like https://firm-ware.cz/oauth2callback/index.php?code=NfKP%21IAAAAJCRNPh-rEjsqDrr7LHDybmPdPoF_1dqz6xxnAGAcLLT8QAAAAEV-1iYOTmT1JXkJuWTugs1W-Hm3FG3HLTvDXXiiFPVhVqq4JxOf2UNJrMm
+You will be redirected to something like http://firm-ware.cz/oauth2callback/index.php?code=<key>
 
 This **redirect URL** will be used in the next step!
 
@@ -92,9 +92,12 @@ Request data for outside temp
 
 ```$ nibeuplink --client_id 'XXX' --client_secret 'YYY' --redirect_uri 'ZZZ' --system 12345 --parameter 40004```
 
-Script op firm-ware.cz/oauth2callback/index.php
-
 ```
+### Callback PHP script on my VPS
+
+URL: firm-ware.cz/oauth2callback/index.php
+```
+
 <?php
 // oauth2callback/index.php
 
@@ -121,4 +124,7 @@ if ( isset( $_GET['error'] ) ) {
 }
 
 ?>
+
+```
+
 ```
