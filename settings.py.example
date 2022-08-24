@@ -1,0 +1,15 @@
+MQTT_ServerIP = "192.168.5.248"
+MQTT_ServerPort = 1883
+LOG_FILENAME = "/home/pi/log/nibe_mqtt.log"
+AUTH_FILE = "nibeuplink.json"
+NIBE_IDENTIFIER = '123456789ABCDEF123456789ABCDEF12'  # NIBE Uplink API: Identifier
+NIBE_SECRET = '1234567890ABCDEF1234567890ABCDEF123456789AB='  # NIBE Uplink API: Secret
+NIBE_CALLBACK_URL = 'https://mydomain.net/oauth2callback/index.php'  # NIBE Uplink API: Callback URL
+NIBE_CLIENT_ID = "12345"
+
+MQTT_TOPIC_CHECK = "huis/Nibe/RPiHome/check"
+MQTT_TOPIC_REPORT = "huis/Nibe/RPiHome/report"
+
+# Topics
+# huis/Nibe/12345/rx
+# huis/Nibe/<temp-device>/temp
