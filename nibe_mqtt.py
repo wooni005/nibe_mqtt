@@ -169,7 +169,7 @@ async def run():
                                     mqtt_publish.single("huis/Nibe/Actief-CompressorGeblokkeerd/rx", int(value), hostname=settings.MQTT_ServerIP, retain=True)
                                 else:
                                     if deviceName in nibeIds.tempDevices:
-                                        # Send as a seperate MQTT msg
+                                        # Send as a separate MQTT msg
                                         sendNibeTempDevice(deviceName, value)
                                     else:
                                         if value in nibeIds.valueConversion:
